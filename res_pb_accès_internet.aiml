@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<aiml version="1.0"> 
+
+    <category>
+      <pattern>souviens toi que *</pattern>
+      <template>Ok c'est noté!
+      <learn>
+        <category>
+          <pattern>* <eval><star/></eval>?</pattern>
+          <template>
+            <eval> <star index="2"/></eval>.
+          </template>
+        </category>
+      </learn>
+      </template>
+    </category>
+
+    
+	<category>
+        <pattern>probleme internet</pattern>
+        <template>
+        	Ok, vous rencontrez des difficultés pour accèder à internet.
+        	Commencez par redémarrez votre box, et réssayez de vous connecter.
+        </template>
+    </category>
+
+	<!-- box -->
+	<category>
+        <pattern>résolut</pattern>        
+        <that>* redémarrez votre box *</that>
+        <template>
+        	OK, super. Un simple redémarrage de la box peut parfois suffire à tout remettre en ordre.
+        </template>
+    </category>
+
+
+	<category>
+        <pattern>toujours pas</pattern>         
+        <that>* redémarrez votre box *</that>      
+        <template>
+        	OK, alors c est peut être un souci physique. Vérifiez toutes les connexions physiques entre votre PC et la box. Débranchez et rebranchez vos câbles. Patientez un peu, tout devrait rentrer dans l ordre. Si ça ne fonctionne toujours pas, essayez avec d autres câbles réseau (celui de la console, du PC des enfants…).
+        </template>
+    </category>
+    <!-- fin box -->
+
+    <!-- cable -->
+    <category>
+        <pattern>résolut</pattern>        
+        <that>* alors c est peut être un souci physique *</that>
+        <template>
+        	OK, super. En général c est toujours un souci de câble ;).
+        </template>
+    </category>
+
+
+	<category>
+        <pattern>toujours pas</pattern>        
+        <that>* alors c est peut être un souci physique *</that>
+        <template>
+        	Si ce n est pas la faute du câble, c est peut-être la carte réseau de votre ordi qui a flanché. Pour vérifier cette hypothèse, reliez un autre appareil (quitte à emprunter le netbook de votre voisin) à votre box. Si celui-ci se connecte au Net, le problème vient forcément de votre machine. Vous pouvez aussi vérifier le bon fonctionnement de la carte réseau, en allant dans le menu Démarrer. Cliquez sur Panneau de configuration, puis Système et sécurité. Dans la fenêtre qui s affiche, cliquez sur Gestionnaire de périphérique placé sous Système. Si l icône Carte réseau n apparaît pas ou que vous voyez un panneau triangulaire jaune, cela signifie qu elle n est plus détectée par Windows. Une réinstallation des pilotes est nécessaire. Si cela ne fait rien, il faudra acheter une autre carte.
+        </template>
+    </category>
+    <!-- fin cable -->
+
+
+</aiml>
